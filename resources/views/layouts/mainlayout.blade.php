@@ -51,4 +51,10 @@
   <script src="{{ URL::asset('js/dashboard.js') }}"></script>
   <script src="{{ URL::asset('js/Chart.roundedBarCharts.j') }}"></script>
  </body>
+ <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+       $('.ckeditor').ckeditor();
+    });
+</script>
 </html>

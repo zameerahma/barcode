@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{  URL::to('/')  }}">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
@@ -23,12 +23,13 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
               <i class="icon-columns menu-icon"></i>
-              <span class="menu-title">Form elements</span>
+              <span class="menu-title">Pages</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{  URL::to('/all-pages')  }}">All Pages</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{  URL::to('/add-page')  }}">Add Page</a></li>
               </ul>
             </div>
           </li>
@@ -76,8 +77,8 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ URL::to('/login-page') }}"> Login </a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ URL::to('/register-page') }}"> Register </a></li>
               </ul>
             </div>
           </li>
