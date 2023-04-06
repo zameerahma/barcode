@@ -28,7 +28,7 @@
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="{{  URL::to('/all-pages')  }}">All Pages</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{  URL::to('/getpages')  }}">All Pages</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{  URL::to('/add-page')  }}">Add Page</a></li>
               </ul>
             </div>

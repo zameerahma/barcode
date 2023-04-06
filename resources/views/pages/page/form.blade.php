@@ -6,7 +6,7 @@
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Description</label>
-    <textarea  name="description" id=""  cols="30" rows="10">@if (isset($page->description)) {{ $page->description }}
+    <textarea  name="description" id=""   class="form-control" cols="30" rows="10">@if (isset($page->description)) {{ $page->description }}
         
         @endif</textarea>
   </div>

@@ -19,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 Route::post('/create-user',[AuthContoller::class,'CreateUser']);
+Route::group(['middleware'=>['auth:sanctum']],function(){
+
+});
+

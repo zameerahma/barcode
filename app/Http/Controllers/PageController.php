@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DataTables;
 use App\Models\Page;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Str;
+
 
 class PageController extends Controller
 {
@@ -25,9 +26,25 @@ class PageController extends Controller
        
         
     }
-    public function AllPages(){
-        $pages= Page::all();
-        return view('pages.page.all-pages',compact('pages'));
+    public function getpages(){
+        return view('pages.page.all-pages');
+    }
+    
+    public function AllPages(Request $request){
+        if ($request->ajax()) {
+            $data = Page::latest()->get();
+            return Datatables::of($data)
+                ->addIndexColumn()
+                ->addColumn('action', function($row){
+                    return '
+                    <a href="' . route('edit.page', $row->id) . '" class="btn btn-xs btn-success" title="Editar">Edit</a>
+                    <a href="' . route('delete.page', $row->id) . '" class="btn btn-xs btn-danger" title="Excluir">Delete</a>
+                ';
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+       
     }
     public function editpage($id){
         $page=Page::find($id);

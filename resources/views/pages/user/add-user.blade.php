@@ -1,4 +1,4 @@
-@extends('layouts.mainlayout')
+@extends('layout.mainlayout')
 @section('content')
 <div class="main-panel">
   <div class="content-wrapper">
@@ -15,7 +15,15 @@
         <label for="exampleFormControlInput1">Email address</label>
         <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com">
       </div>
-     
+      <div class="form-group">
+      <select class="form-select form-control">
+        <option value="">--Select a Role--</option>
+        
+        <option value="admin">Admin</option>
+        <option value="user">User</option>
+        <option value="vendor">Vendor</option>
+      </select>
+    </div>
       <div class="form-group">
         <label for="password">Password</label>
       <input type="password" class="form-control"  name="password" id="" placeholder="***">
